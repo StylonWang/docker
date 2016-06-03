@@ -1,5 +1,5 @@
 postgresql:
-  image: stylonwang/sqa_postgresql 
+  image: sameersbn/postgresql:9.4-21
   environment:
     - DB_USER=redmine
     - DB_PASS=password
@@ -8,7 +8,7 @@ postgresql:
     - /srv/docker/redmine/postgresql:/var/lib/postgresql
 
 redmine:
-  image: stylonwang/sqa_redmine
+  image: stylonwang/sqa_redmine_v3.2.1
   links:
     - postgresql:postgresql
   environment:
